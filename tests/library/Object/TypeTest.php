@@ -5,8 +5,8 @@ class Object_TypeTest extends App_Test_Case {
 
     public function testScalars() {
 
-        $int = new Object_Type(5);
+        $int = new Object_Int(5);
 
-        $this->assertTrue($int->equals(5));
+        $this->assertTrue($int->compare(5) == 0);
     }
 }

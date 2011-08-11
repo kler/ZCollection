@@ -20,7 +20,7 @@ class Object_Bool implements Object_Boxed {
 
     public function compare($a) {
 
-        $a = (int) a;
+        $a = (int) $a;
         $b = (int) $this->_boxed;
 
         if ($b > $a) {

@@ -1,7 +1,7 @@
 <?php
 class Object_Int implements Object_Boxed {
 
-    protected final $_boxed;
+    protected $_boxed;
 
     public function __construct($var) {
 
@@ -20,7 +20,7 @@ class Object_Int implements Object_Boxed {
 
     public function compare($a) {
 
-        $a = (int) a;
+        $a = (int) $a;
 
         if ($this->_boxed > $a) {
             return 1;

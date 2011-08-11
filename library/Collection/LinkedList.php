@@ -257,7 +257,7 @@ class Collection_LinkedList
         }
 
         if ($candidateNode->isEmpty()) {
-            throw new Calendar_Exception('Can not insert an empty node');
+            throw new Collection_Exception('Can not insert an empty node');
         }
 
         if (!$candidateNode->belongsTo($this)) {
@@ -471,7 +471,7 @@ class Collection_LinkedList
      */
     protected function _index(Collection_LinkedList_Node $node) {
 
-        $contextHash = $this->_getObjectHash($node->getContext());
+        $contextHash = Object_Type::hash($node->getContext());
         $this->objects[$contextHash] = $node;
 
     }
@@ -482,7 +482,7 @@ class Collection_LinkedList
      */
     protected function _toNode($var) {
 
-        $hash = $this->_getObjectHash($var);
+        $hash = Object_Type::hash($var);
         $this->objects = (array) $this->objects;
 
         $exists = isset($this->objects[$hash]);

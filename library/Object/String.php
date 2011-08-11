@@ -20,7 +20,7 @@ class Object_String implements Object_Boxed {
 
     public function compare($a) {
 
-        $a = (string) a;
+        $a = (string) $a;
 
         return strcmp($this->_boxed, $a);
 

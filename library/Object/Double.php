@@ -20,7 +20,7 @@ class Object_Double implements Object_Boxed {
 
     public function compare($a) {
 
-        $a = (float) a;
+        $a = (float) $a;
 
         if ($this->_boxed > $a) {
             return 1;
